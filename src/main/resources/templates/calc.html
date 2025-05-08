@@ -16,7 +16,12 @@
       <!-- Ползунок 1 -->
       <div class="mb-4">
         <label for="range1" class="form-label">
-          Сумма предмета лизинга: <span id="range1Value">1 000 000</span> ₽
+          Сумма предмета лизинга:
+          <div class="input-group">
+            <input type="number" class="form-control" id="leaseAmountInput" min="1000000" max="100000000" step="1" value="1000000">
+            <span class="input-group-text">₽</span>
+          </div>
+
         </label>
         <input type="range" class="form-range" min="1000000" max="100000000" step="1" id="range1" value="1000000">
       </div>
@@ -33,7 +38,7 @@
       <div class="mb-4">
         <label for="range3" class="form-label">
           Первоначальный взнос: <span id="range3Value">0</span> %
-          <label id=result5></label>
+          <label id=result5></label> ₽
         </label>
         <input type="range" class="form-range" min="0" max="49" step="1" id="range3" value="0">
       </div>

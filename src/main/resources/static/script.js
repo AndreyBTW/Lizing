@@ -73,6 +73,18 @@ document.getElementById('range3').addEventListener('input', function() {
     updateResult();
 });
 
+const leaseAmountInput = document.getElementById('leaseAmountInput');
+
+range1.addEventListener('input', function() {
+    // range1Value.textContent = new Intl.NumberFormat('ru-RU').format(this.value);
+    leaseAmountInput.value = this.value;
+    updateResult();
+});
+leaseAmountInput.addEventListener('input', function() {
+    range1.value = this.value;
+    // range1Value.textContent = new Intl.NumberFormat('ru-RU').format(this.value);
+    updateResult();
+});
 
 // Инициализация при загрузке
 updateResult();
